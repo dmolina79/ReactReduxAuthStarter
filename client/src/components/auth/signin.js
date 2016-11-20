@@ -2,6 +2,22 @@ import React, { Component } from 'react';
 import { reduxForm } from 'redux-form';
 import * as actions from '../../actions';
 
+const FIELDS = {
+	email: {
+		type: 'input',
+		label: 'Email'
+	}, 
+	password: {
+		type: 'input',
+		label: 'Password'
+
+	}, 
+	passwordConfirm: {
+		type: 'input',
+		label: 'Confirm Password'
+	} 
+};
+
 class Signin extends Component {
 	handleFormSubmit({ email, password }) {
 		console.log(email, password);
